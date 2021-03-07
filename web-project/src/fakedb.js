@@ -1,0 +1,40 @@
+export let db = {
+  trains: [
+    {
+      train_id: 888888,
+      number: 223,
+      direction: 'Челябинск',
+      time_in: 202012041231,
+      time_out: 202012041235,
+      line: 2,
+      assigned: false,
+      loco_change: true,
+      loco_type: 'ВЛ10',
+      train_features: { hp: true, sm: true, vv: true },
+      allowed_crew_ids: [999999, 88888, 7777, 5555],
+      candidate_crew: 88888,
+      train_updated: 202012040000,
+    },
+  ],
+
+  crews: [
+    {
+      crew_id: 999999,
+      driver_id: 1111,
+      driver_name: 'Иванов Иван Иванович',
+      assistant_id: 1112,
+      assistant_name: 'Петров Петр Петрович',
+      crew_features: { hp: true, sm: true, vv: true },
+      time_in: 202012041100,
+      time_out: 202012041130,
+      assigned: true,
+      home_depot_name: 'Екатеринбург',
+      home_depot_id: 111,
+      crew_status: { return: true, nights2: true, long_distance: true },
+      allowed_train_ids: [7777, 88888, 99999, 11111, 44444],
+      candidate_train: 7777,
+      line: 10,
+      crew_updated: 202012040000,
+    },
+  ],
+}
